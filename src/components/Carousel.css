@@ -1,0 +1,51 @@
+.carousel {
+  width: calc(
+    100% - 20px
+  ); /* Adjusted to align with side nav if it has a fixed width */
+  margin-left: 10px; /* Adjust margin if side nav has it */
+  position: relative;
+  overflow: hidden;
+  display: flex; /* Ensures content aligns horizontally */
+  align-items: center; /* Centers the images */
+}
+
+.carousel img {
+  width: 100%;
+  height: 250px; /* Set fixed height for uniform size */
+  object-fit: cover; /* Crop to fit fixed dimensions while maintaining aspect */
+  display: block;
+  margin: 0; /* Remove margin for alignment */
+}
+
+.prev,
+.next {
+  /* Position and styling adjustments for arrows */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: rgb(147, 144, 144);
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 3px;
+  
+}
+
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+.prev {
+  left: 0; /* Aligns the 'prev' button to the left */
+}
+
+.next {
+  right: 0; /* Aligns the 'next' button to the right */
+}
